@@ -1,0 +1,137 @@
+.head{
+    background-color: #0bb40b;
+background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+position: sticky;
+z-index: 100;
+padding: .5rem 5rem;
+box-shadow: 5px 5px 20px rgba(17, 12, 12, 0.712);
+
+}
+
+.navbar-brand{
+    font-family: 'Bonheur Royale', cursive;
+   font-weight: 400;
+   font-size: 50 px;
+   padding-left: 20px;  
+}
+
+.nav-item{
+   
+   margin-left: 50px;
+    padding-top: 5px;
+    /* padding-bottom:5px;  */
+    color: rgb(243, 239, 239);
+}
+.nav-item a:hover{
+    color: black;
+    border-bottom: 2px solid red;
+}
+.nh li a{
+    color: black;
+}
+.active1
+{
+    border-bottom: 2px solid red;
+}
+.qutoes {
+    font-family:monospace;
+    text-align: center;
+    padding: 2% 4%;
+    position: relative;
+    animation-direction: alternate-reverse;
+    animation-duration: 10 sec;
+    animation-name: qutoes;
+    animation-timing-function: linear;
+}
+.testimonials{
+    background-color: rgb(33, 130, 155);
+    background-color: rgb(255, 255, 255);    
+    background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png"); 
+  
+}
+.cr1
+{  
+ margin-left: 9px;
+}
+.testimonial-image{
+    width: 800px;
+    height: 500px;
+    /* margin-left: 350px; */
+    margin-top: 10px;
+    margin-bottom: 40px;    
+    
+}
+.testimonial-text{
+    font-family: sans-serif;
+    font-size: 2rem;
+    line-height: 1cm;
+    color: white;
+    text-align: center;
+}
+#features, #tittle{
+    
+      
+    background-color: rgb(194, 190, 190);   
+    /* background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");  */
+}
+.feature-box{
+    text-align: center;
+    padding: 5%;
+    color: black;
+    border: rgb(240, 235, 235) 2px solid;
+}
+h3{
+    font-family:"Arial Narrow Bold" ;
+}
+.icon{
+color: crimson;
+margin-bottom: 1rem;
+}
+.icon:hover{
+    color: orangered;
+}
+/* #footer{
+    padding: 2% 5%;
+    text-align: center;
+    color: rgb(241, 237, 237);
+} */
+.footer{
+    color: black;
+}
+.foot{
+    background-color: rgb(9, 15, 105);
+    /* background-color: rgb(14, 14, 14); */
+   
+    background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");
+}
+.me-5 {
+    color: white;
+}
+.fab{
+    color:white
+}
+/* .social-icon{
+    margin: 20px 10px;
+
+} */
+#ct
+{
+    margin-right: 80%;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-image: none;
+  color: red;
+  font-size: 20px;
+  background-color: #0bb40b;
+  padding: 1% 2%;
+}
+
+#em{
+    margin-right: 76%;
+}
+@media (max-width:550px) {
+
+    
+}

@@ -1,0 +1,597 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="store.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b754d9a8d3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+       <script src="https://kit.fontawesome.com/b754d9a8d3.js" crossorigin="anonymous"></script>
+
+</head>
+<title>Products</title>
+
+<body class="type" style="overflow-x: hidden;">
+    <section id="head">
+        <!-- <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand fst-italic fs-1"> <b>OUR PRODUCTS</b> </a>
+                </div>
+                <div class="mcart"> -->
+        <!-- <button onclick="final()"class="btn btn-dark mr-auto"id=mc>MY CART</button> -->
+        <!-- <a href="/cart" class="btn btn-dark"> MY CART>></a>
+              </div>
+              </div>
+            </nav> -->
+        <nav class="navbar navbar-expand-lg  navbar-light">
+
+            <a class="navbar-brand fst-italic fs-1"> <b>OUR PRODUCTS</b> </a>
+
+
+
+            <button class="navbar-toggler  " type="button" data-bs-toggle="collapse" data-bs-target="#Demo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="Demo02">
+
+                <ul class="navbar-nav ml-auto nh">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"> HOME </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/toc">  TYPES OF CASHEW </a>
+                    </li>
+                    <li class="nav-item  active1">
+                        <a class="nav-link" href="/store">  PRODUCT STORE </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutus"> ABOUT US </a>
+                    </li>
+                </ul>
+                <div class="mcart">
+                    <a href="/cart" class="btn btn-dark fas fa-solid fa-cart-shopping"> MY CART </a>
+
+                </div>
+            </div>
+
+
+        </nav>
+    </section>
+
+
+    <div id=tittle>
+        <marquee behavior="alternate"><span class="marquee"><h3> FOR BIG ORDERS ! CONTACT US AS PRIOR !! </h3></span></marquee>
+    </div>
+    <% if(message == "success") { %>
+<div class="popup mb-2" id="popupmsgSus">
+      <button type="button" class="btn btn-success btn-block message_btn" onclick="messageHide()">
+  <div class="text-right">
+      <i class="far fa-times-circle text-light float-right"></i>
+  </div>
+ Product added to cart!!
+</button>
+  </div>
+  <% } %>
+    <div class="row nutsVarity container-fluid">
+      <div class="col-lg-1"></div>
+        <div class="col-lg-3 col-md-3 col-sm-5 fr">
+            <div class="card" style="width: 18rem;">
+              <span class="tag display-topleft">Sale</span>
+                <img src="images (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <form action="/cart" method="post">
+    
+                        <h5 class="card-title">White Wholes </h5>
+                        <p class="card-text">    
+                          <input type="hidden" id="type1name"name="typename" value="White Wholes - 180">
+                    <select name="subType" id="type1" class="form-control mr-3" onchange="price(this);">
+                          <!-- <option selected >Choose type</option>  -->
+                          <option selected value="500">White Wholes - 180</option>
+                          <option  value="700">White Wholes - 210</option>
+                          <option value="900">White Wholes - 240</option>
+                          <option value="200">White Wholes - 320</option>
+                          <option value="700">White Wholes - 210</option>
+                          <option value="300">White Wholes - 450</option>
+                          <option value="600">White Wholes - 500</option>
+                        </select> Standard-250g</p>
+                        <p class="card-text">Quantity</p>
+                        <i class=" fas fa-solid fa-minus fs-5" onclick="decrement('demoInput')"></i>
+                        <!-- <button  type="button" onclick="decrement('demoInput')">-</button> -->
+                        <input class="text-center" id=demoInput type=number name="quantity" min=1 max=10 value="1" >
+                        <i class=" fas fa-solid fa-plus fs-5" onclick="increment('demoInput')"></i>
+                        <!-- <button type="button" onclick="increment('demoInput')">+</button> -->
+                  
+                          <h4 class="h4-responsive text-center">
+                            <span class="green-text">
+                              <strong>₹</strong>
+                              <strong id="cost"  name="price">500</strong>
+                            </span>
+                            <span class="grey-text">
+                              <small>
+                                <s>₹</s>
+                                <s id="cos">700</s>
+                              </small>
+                            </span>
+                          </h4>
+        
+                </div>
+               
+                <!-- <a href="#" class="btn btn-primary">BUY NOW >></a> -->
+                <input type="hidden" name="type" value="Cashew Kernels">
+                <!-- <input type="hidden" name="subType" value="White Wholes"> -->
+                <input type="hidden" name="weight" value="Standard-250g">
+                
+                <!-- <div class="text-center mb-2">
+                    <button type="submit" onclick="WhiteWholes()" class="btn btn-primary b5"><p id=dm>BUY NOW >> </p></button>
+                </div> -->
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary">Add to cart
+                      <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+
+
+
+                </form>
+            </div>
+       
+            <div class="col-lg-1"></div>
+
+        <div class=" col-lg-3 col-md-3 col-sm-5 fr">
+            <div class="card" style="width: 18rem;">
+              <span class="tag display-topleft">Sale</span>
+                <img src="images (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <form action="/cart" method="post">
+                        <h5 class="card-title">Scorched Wholes </h5>
+                        <p class="card-text">
+                          <input type="hidden" id="type2name"name="typename" value="Scorched Wholes SW">
+                    <select name="subType" id="type2" class="form-control" onchange="price1(this);">
+                      
+                      <option selected value="650">Scorched Wholes SW</option>
+                      <option value="700">Scorched Wholes SW-180</option>
+                      <option value="800">Scorched Wholes SW-210</option>
+                      <option value="450">Scorched Wholes SW-240</option>
+                      <option value="660">Scorched Wholes SW-320</option>
+                      <option value="750">Scorched Wholes SW-450</option>
+                      <option value="860">Scorched Wholes SW-500</option>
+                    </select> Standard-250g.</p>
+                    <p class="card-text">Quantity</p>
+                          <i class=" fas fa-solid fa-minus fs-5" onclick="decrement('demoInput1')"></i>
+                       <input class="text-center" id=demoInput1  type=number min=1 max=10 name="quantity" value="1" >
+                        <i class="fas fa-solid fa-plus fs-5" onclick="increment('demoInput1')"></i>
+            
+                        <h4 class="h4-responsive text-center">
+                            <span class="green-text">
+                              <s>₹</s>
+                              <strong id="cost1" name="price">700</strong>
+                            </span>
+                            <span class="grey-text">
+                              <small>
+                                <s>₹</s>
+                                <s id="cos1">1000</s>
+                              </small>
+                            </span>
+                          </h4>
+                          
+                </div>
+
+                <!-- <a href="#" class="btn btn-primary">BUY  NOW >></a> -->
+                <input type="hidden" name="type" value="Cashew Kernels">
+                <!-- <input type="hidden" name="subType" value="Scorched Wholes"> -->
+                <input type="hidden" name="weight" value="Standard-250g">
+                
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary">Add to cart
+                      <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+        
+            <div class="col-lg-1"></div>
+        <div class="col-lg-3 col-md-3 col-sm-5 fr">
+            <div class="card" style="width: 18rem;">
+              <span class="tag display-topleft">Sale</span>
+                <img src="images (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <form action="/cart" method="post">
+                        <h5 class="card-title">Dessert Wholes</h5>
+                        <p class="card-text"> 
+                          <input type="hidden" id="type3name"name="typename" value="Scorched Wholes Seconds">
+                        <select name="subType" id="type3" class="form-control" onchange="price2(this);">
+                        
+                      <option selected value="750">Scorched Wholes Seconds</option>
+                      <option value="800">Dessert Wholes DW</option>
+                    </select> Standard-250g </p>
+                    <p class="card-text">Quantity</p>
+                    <i class=" fas fa-solid fa-minus fs-5" onclick="decrement('demoInput2')"></i>
+                    <input id=demoInput2 class="text-center" type=number name="quantity" min=1 max=10 value="1">
+                    <i class="fas fa-solid fa-plus fs-5" onclick="increment('demoInput2')"></i>
+              
+                        <h4 class="h4-responsive text-center">
+                            <span class="green-text">
+                              <s>₹</s>
+                              <strong id="cost2" name="price" >750</strong>
+                            </span>
+                            <span class="grey-text">
+                              <small>
+                                <s>₹</s>
+                                <s id="cos2">1050</s>
+                              </small>
+                            </span>
+                          </h4>
+        
+                </div>
+                <!-- <a href="#" class="btn btn-primary">BUY  NOW >></a> -->
+                <input type="hidden" name="type" value="Cashew Kernels">
+                <!-- <input type="hidden" name="subType" value="DessertWholes"> -->
+                <input type="hidden" name="weight" value="Standard-250g">
+                <!-- <input type="hidden" name="amount" value="450"> -->
+
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary">Add to cart
+                      <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+
+                </form>
+            </div>
+        
+            <div class="col-lg-1"></div>
+        <div class="col-lg-3 col-md-3 col-sm-5 fr">
+            <div class="card" style="width: 18rem;">
+              <span class="tag display-topleft">Sale</span>
+                <img src="images (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <form action="/cart" method="post">
+                        <h5 class="card-title">White Pieces</h5>
+                        <p class="card-text">
+                          <input type="hidden" id="type4name"name="typename" value="Butts B">
+                      <select name="subType" id="type4" class="form-control"onchange="price3(this);">
+                      <option selected value="600">Butts B</option>
+                      <option value="700">Splits S</option>
+                      <option value="550">Large White Pieces (LWP)</option>
+                      <option value="450">Small White Pieces (SWP)</option>
+                      <option value="680">Baby Bits BB</option>
+                    </select> Standard-250g</p>
+                    <p class="card-text">Quantity</p>
+
+                    <i class="fas fa-solid fa-minus fs-5" onclick="decrement('demoInput3')"></i>
+                    <input id=demoInput3 class="text-center" type=number name="quantity" min=1 max=10 value="1">
+                    <i class="fas fa-solid fa-plus fs-5" onclick="increment('demoInput3')"></i>
+              
+                        <h4 class="h4-responsive text-center">
+                            <span class="green-text">
+                              <s>₹</s>
+                              <strong id="cost3"  name="price" >600</strong>
+                            </span>
+                            <span class="grey-text">
+                              <small>
+                                <s>₹</s>
+                                <s id="cos3">900</s>
+                              </small>
+                            </span>
+                          </h4>
+        
+                </div>
+                <!-- <a href="#" class="btn btn-primary">BUY  NOW >></a> --><input type="hidden" name="type" value="Cashew Kernels">
+                <input type="hidden" name="type" value="Cashew Kernels">
+                <input type="hidden" name="weight" value="Standard-250g">
+                <!-- <input type="hidden" value="500"> -->
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary">Add to cart
+                      <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+
+                </form>
+           
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3 col-md-3 col-sm-5 fr">
+            <div class="card" style="width: 18rem;">
+              <span class="tag display-topleft">Sale</span>
+                <img src="images (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <form action="/cart" method="post">
+                        <h5 class="card-title">Scorched Pieces</h5>
+                        <p class="card-text">
+                          <input type="hidden" id="type5name"name="typename" value="Scorched Butts SB">
+                    <select name="subType" id="type5" class="form-control" onchange="price4(this);">
+                    <option selected value="870">Scorched Butts SB</option>
+                    <option value="560">Scorched Splits SS</option>
+                    <option value="720">Scorched Pieces SP</option>
+                    <option value="450">Scorched Small Pieces SSP</option>
+               </select> Standard-250g</p>
+                  <p class="card-text">Quantity</p>
+                  <i class="fas fa-solid fa-minus fs-5" onclick="decrement('demoInput4')"></i>
+                  <input id=demoInput4 class="text-center" type=number name="quantity" min=1 max=10 value="1">
+                  <i class="fas fa-solid fa-plus fs-5" onclick="increment('demoInput4')"></i>
+            
+                        <h4 class="h4-responsive text-center">
+                            <span class="green-text">
+                              <s>₹</s>
+                              <strong id="cost4"  name="price">870</strong>
+                            </span>
+                            <span class="grey-text">
+                              <small>
+                                <s>₹</s>
+                                <s id="cos4" >1170</s>
+                              </small>
+                            </span>
+                          </h4>
+                    
+                </div>
+                <!-- <a href="#" class="btn btn-primary">BUY  NOW >></a> -->
+                <input type="hidden" name="type" value="Cashew Kernels">
+                <!-- <input type="hidden" name="subType" value="ScorchedPieces"> -->
+                <input type="hidden" name="weight" value="Standard-250g">
+                <!-- <input type="hidden" name="amount" value="350"> -->
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary">Add to cart
+                      <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+
+                </form>
+           
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3 col-md-3 col-sm-5 fr">
+            <div class="card" style="width: 18rem;">
+              <span class="tag display-topleft">Sale</span>
+                <img src="images (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <form action="/cart" method="post">
+                        <h5 class="card-title">Dessert Pieces</h5>
+                        <p class="card-text">
+                          <input type="hidden" id="type6name" name="typename" value="Scorched Pieces Seconds (SPS)">
+                      <select name="subType" id="type6" class="form-control" onchange="price5(this);">
+                      <option selected value="560">Scorched Pieces Seconds (SPS)</option>
+                      <option value="450">Dessert Pieces DP</option>
+        
+                    </select>Standard-250g</p>
+                    <p class="card-text">Quantity</p>
+                    <i class="fas fa-solid fa-minus fs-5" onclick="decrement('demoInput5')"></i>
+                    <input id=demoInput5 class="text-center" type=number name="quantity" min=1 max=10 value="1">
+                    <i class="fas fa-solid fa-plus fs-5" onclick="increment('demoInput5')"></i>
+              
+                        <h4 class="h4-responsive text-center">
+                            <span class="green-text">
+                              <s>₹</s>
+                              <strong id="cost5"  name="price">560</strong>
+                            </span>
+                            <span class="grey-text">
+                              <small>
+                                <s>₹</s>
+                                <s id="cos5">860</s>
+                              </small>
+                            </span>
+                          </h4>
+        
+                </div>
+                <input type="hidden" name="type" value="Cashew Kernels">
+                <!-- <input type="hidden" name="subType" value="DessertPieces"> -->
+                <input type="hidden" name="weight" value="Standard-250g">
+                <!-- <input type="hidden" name="amount" value="400"> -->
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary">Add to cart
+                      <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+
+                </form>
+            
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3 col-md-3 col-sm-5 fr">
+            <div class="card" style="width: 18rem;">
+                <img src="images (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <form action="/cart" method="post">
+                        <h5 class="card-title">Walnuts</h5>
+                        <p class="card-text"> Standard-250g</p>
+                    <p class="card-text">Quantity</p>
+                    <i class="fas fa-solid fa-minus fs-5" onclick="decrement('demoInput6')"></i>
+                    <input id=demoInput6 class="text-center" type=number name="quantity" min=1 max=10 value="1">
+                    <i class="fas fa-solid fa-plus fs-5" onclick="increment('demoInput6')"></i>
+              
+                        <h4 class="h4-responsive text-center">
+                            <span class="green-text">
+                              <strong>₹500</strong>
+                            </span>
+                            <span class="grey-text">
+                              <small>
+                                <s>₹800</s>
+                              </small>
+                            </span>
+                          </h4>
+        
+                </div>
+                <!-- <a href="#" class="btn btn-primary">BUY  NOW >></a> -->
+                <input type="hidden" name="typename" value="Walnuts">
+                <input type="hidden" name="subType" value="500">
+                <input type="hidden" name="weight" value="Standard-250g">
+                <!-- <input type="hidden" name="price" value="500"> -->
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary">Add to cart
+                      <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+
+                </form>
+            
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3 col-md-3 col-sm-5 fr">
+            <div class="card" style="width: 18rem;">
+                <img src="images (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <form action="/cart" method="post">
+                        <h5 class="card-title">Pista</h5>
+                        <p class="card-text">Standard-250g</p>
+                  <p class="card-text">Quantity</p>
+
+                  <i class="fas fa-solid fa-minus fs-5" onclick="decrement('demoInput7')"></i>
+                  <input id=demoInput7 class="text-center" type=number  name="quantity" min=1 max=10 value="1">
+                  <i class="fas fa-solid fa-plus fs-5" onclick="increment('demoInput7')"></i>
+            
+                        <h4 class="h4-responsive text-center">
+                            <span class="green-text">
+                              <strong>₹350</strong>
+                            </span>
+                            <span class="grey-text">
+                              <small>
+                                <s>₹600</s>
+                              </small>
+                            </span>
+                          </h4>
+        
+                </div>
+                <!-- <a href="#" class="btn btn-primary">BUY  NOW >></a> -->
+                <input type="hidden" name="typename" value="Pista">
+                <input type="hidden" name="subType" value="350">
+                <input type="hidden" name="weight" value="Standard-250g">
+                <!-- <input type="hidden" name="price" value=""> -->
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary">Add to cart
+                      <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+
+                </form>
+            </div>
+            <div class="col-lg-1"></div>
+
+        <div class="col-lg-3 col-md-3 col-sm-5 fr">
+            <div class="card" style="width: 18rem;">
+                <img src="images (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <form action="/cart" method="post">
+                        <h5 class="card-title">Almonds</h5>
+                        <p class="card-text"> Standard-250g</p>
+                    <p class="card-text">Quantity</p>
+                    <i class="fas fa-solid fa-minus fs-5" onclick="decrement('demoInput8')"></i>
+                    <input id=demoInput8 class="text-center" type=number name="quantity" min=1 max=10 value="1">
+    
+                    <i class="fas fa-solid fa-plus fs-5" onclick="increment('demoInput8')"></i>
+              
+                        <h4 class="h4-responsive text-center">
+                            <span class="green-text">
+                              <strong>₹400</strong>
+                            </span>
+                            <span class="grey-text">
+                              <small>
+                                <s>₹500</s>
+                              </small>
+                            </span>
+                          </h4>
+        
+                </div>
+                <input type="hidden" name="typename" value="Almonds">
+                <input type="hidden" name="subType" value="400">
+                <input type="hidden" name="weight" value="Standard-250g">
+                <!-- <input type="hidden" name="price" value=""> -->
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary">Add to cart
+                      <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                </form>
+            </div>
+       
+         
+    </div>
+    
+
+    <!-- <div class="back">
+            <a href="/"><button class="button buttontc" >Back to home</button></a>
+           </div> -->
+    <!-- <P id=cart>
+      
+    </P> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+      function price(cost){
+        
+        var exPrice = parseInt(cost.value)+300;
+        document.getElementById("cost").innerHTML=cost.value;
+        document.getElementById("cos").innerHTML=exPrice;
+        var t=cost.options[cost.selectedIndex].text;
+        document.getElementById("type1name").value=t;
+      }
+      function price1(cost){
+        // console.log(cost);
+        var exPrice = parseInt(cost.value)+300;
+        document.getElementById("cost1").innerHTML=cost.value;
+        document.getElementById("cos1").innerHTML=exPrice;
+        var t=cost.options[cost.selectedIndex].text;
+        document.getElementById("type2name").value=t;
+      }
+      
+      function price2(cost){
+        // console.log(cost);
+        var exPrice = parseInt(cost.value)+300;
+        document.getElementById("cost2").innerHTML=cost.value;
+        document.getElementById("cos2").innerHTML=exPrice;
+        var t=cost.options[cost.selectedIndex].text;
+        document.getElementById("type3name").value=t;
+      }
+      function price3(cost){
+        // console.log(cost);
+        var exPrice = parseInt(cost.value)+300;
+        document.getElementById("cost3").innerHTML=cost.value;
+        document.getElementById("cos3").innerHTML=exPrice;
+        var t=cost.options[cost.selectedIndex].text;
+        document.getElementById("type4name").value=t;
+      }
+      function price4(cost){
+        // console.log(cost);
+        var exPrice = parseInt(cost.value)+300;
+        document.getElementById("cost4").innerHTML=cost.value;
+        document.getElementById("cos4").innerHTML=exPrice;
+        var t=cost.options[cost.selectedIndex].text;
+        document.getElementById("type5name").value=t;
+      }
+      function price5(cost){
+        // console.log(cost);
+        var exPrice = parseInt(cost.value)+300;
+        document.getElementById("cost5").innerHTML=cost.value;
+        document.getElementById("cos5").innerHTML=exPrice;
+        var t=cost.options[cost.selectedIndex].text;
+        document.getElementById("type6name").value=t;
+      }
+
+
+      function increment(inputFun) {
+        // alert(inputFun);
+        document.getElementById(inputFun).stepUp();
+      }
+      function decrement(inputFun) {
+      // alert(inputFun);
+        document.getElementById(inputFun).stepDown();
+    }
+   function messageHide(){
+     document.getElementById("popupmsgSus").style.display="none";
+   }
+    </script>
+</body>
+
+</html>

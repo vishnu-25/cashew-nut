@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="store.css">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+       <script src="https://kit.fontawesome.com/b754d9a8d3.js" crossorigin="anonymous"></script>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+       
+       <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+<!-- Bootstrap core CSS -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- Material Design Bootstrap -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"> -->
+
+<!-- model -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+
+<script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+
+
+       <title>cart</title>
+</head>
+
+<body class="bca"  style="overflow-x: hidden;">
+  
+  <section id="head4">
+    <nav class="navbar navbar-expand-lg  navbar-light">
+      <a class="navbar-brand1 fst-italic fa-solid fa-cart-shopping fa-3x"><b>MY CART</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Demo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          
+        <div class="collapse navbar-collapse" id="Demo02">
+     
+      <ul class="navbar-nav ml-auto nh1">
+          <li class="nav-item1 ">
+              <a class="nav-link "href="/"> HOME </a>
+          </li>
+          <li class="nav-item1 active1">
+              <a class="nav-link"href="/toc">  TYPES OF CASHEW </a>
+          </li>
+          <li class="nav-item1 ">
+              <a class="nav-link"href="/store">  PRODUCT STORE </a>
+          </li>
+          <li class="nav-item1 ">
+            <a class="nav-link"href="/aboutus"> ABOUT US </a>
+        </li>
+      </ul>
+      </div>
+   </nav>
+  </section>
+  <!--     
+   
+      <div class="row">
+        <%found.forEach((val)=>{%>
+        <div class="col-lg-3 offset-lg-1 col-md-3 col-sm-5 fr">
+            <div class="card" style="width: 18rem;">
+                <img src="images (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <form action="/cart" method="post">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text"><%=val.type %><b><%=val.subtype%></b> <%=val.weight%></p>
+                 
+                </form>
+                </div>
+              </div>
+       </div>
+       <%})%> 
+      <p class="tl">the total amount :<%=tot%></p> 
+       </div> --> 
+        <% if(c != 0) { %>
+       <table class="shadow">
+        <thead>
+            <tr>
+                <th class="column1">S.No.</th>
+                <th class="column2">Product</th>
+                <th class="column3">Quantity</th>
+                <th class="column4">Price</th>
+                <th class="column5">Total</th>
+                <th class="column6">Remove</th>
+            </tr>
+        </thead>
+
+        <%found.forEach((val)=>{%>
+                <tbody>
+                  <form action="/delete_product" method="post">
+                  <tr>
+                      <td class="column1">
+                      <%= sno++ %></td>
+                      <td class="column2">
+                        <input type="hidden" name="type" value="<%= val.type %>">
+                        <input type="hidden" name="weight" value="<%= val.weight %>">
+                        <%=val.type %></b> <%=val.weight%>
+                      </td>
+                      <td class="column3">
+                        <input type="hidden" name="quantity" value="<%= val.quantity %>">
+                        <%=val.quantity%>
+                      </td>
+                      <td class="column4">
+                        <input type="hidden" name="total" value="<%= val.total %>">
+                        <%=val.total%>
+                      </td>
+                      <td class="column5">
+                          <input type="hidden" name="price" value="<%= val.price %>">
+                          <%=val.price%>
+                        </td>
+              
+                        
+
+                        <td class="column6">
+  
+                                <button type="submit" class="removeBTN">
+                                    <!-- <i class="fas fa-trash-alt text-danger fa-2x"></i> -->
+                                    <i class="fa-solid fa-circle-minus text-danger fa-2x"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </form>
+                </tbody>
+                <% }) %>
+                
+                
+
+    </table>
+
+
+       <div class="checkout">
+        <div class="totl">
+          <p>Total Amount :<%=tot%></p> 
+        </div>
+      
+<!-- <button type="button" class="btn btn" id="ck" data-toggle="modal" data-target="#modalPush">Check Out</button>
+
+<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">ENTER YOUR DETAILS</p>
+      </div>
+
+      <div class="modal-body">
+      
+
+      </div>
+
+      
+      <div class="modal-footer flex-center">
+        <a href="https://mdbootstrap.com/docs/standard/pro/" class="btn btn-info">Yes</a>
+        <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">No</a>
+      </div>
+    </div>
+   
+  </div>
+</div> -->
+
+<div class=" checkout-btn">
+  <button type="button" class="btn btn" id="ck"  data-toggle="modal" data-target="#myModal">CHECK OUT</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <form action="/details" method="post">
+      <div class="modal-content">
+        <div class="modal-header">
+        
+          <h4 class="modal-title text-center">ENTER YOUR DETAILS</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control mb-2" id="username" placeholder="enter your name" name="customerName">
+          <input type="number" class="form-control mb-2 " id="userphone" placeholder="enter your ph number" name="customerPh">
+          <textarea class="form-control" id="useraddress mb-2" rows="3" placeholder="Address" name="customerAddress"></textarea>
+      
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Buy</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+        <div class="clear"></div>
+      </div>
+       <% } else { %>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAmVBMVEX///+Y2/aa3/olpdz6//+Y2/dCsOA+o85XueMio9mZ2vab3fcqp91DsN4ZodhWsNS74eiF1fTy//+R2/l2zO81qdqk1Ophv+h+0PLu/v8ooNM4q9tvxuxPtuON2vnF5vFrvN6X0ejd9fmJyeG34/LL6vCn2OjY9Pk3rd9svdxQrNV9wtp4wd8inM2b0uSLyuBgsNFGp87a/f9DE5H0AAAKtElEQVR4nO2cCXeqOheGlYiaEmIVqYozDrVUPe33/3/ctzMAoU5Yoepd+71rdV3POZU87GRPCVQqKBQKhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQKBTqvMLVev5v/rZcde49kjJUW/0bBpxTLhTM1oN7D6hg1ZYtTgjg+b4PnIRwfxHee1BF6h34eNDaTweDzmAQLre++Lyv3XtcRam2D4BnHlbCN6VlpTP94oRG/xEz1racBAux7r7E/CRgvhV8mH5zspvee3BFqAbWaqzk/7UIC0CMv8qPCyBf3ndwRag24/xLOU4gHFue16aKsFJZBiR4fiv+4+RLhz9B6FSdlLDyCojPvhannERx6DskrKw5ad1pZAWpExlGOkJY+aR8fZeRFaU3zvfJh2OEgwZpPHMO12mwRhrWjxFWlvypjQjDN8LBUcLaN4meOLeZEd+YgkcJwdmIBKAWLuez+TJ8MthBQLbGx+OE4Y5s9zOoO0S6E/iz/TR8noU55dwM6McJK5FI5KDwYIwIQW0VPQ3mnGfi+QnCBWFs2By166TeHjWHlFJhzF30AaXIo0/abTYSnCBcc9q2LMdyiQs/La8/GvsBldVkEH2+rR65Vp6RlmmEE4SvnPad6oskrIIcx7Em/VHTF8aESbuLtg+L2SJf5scThCsgBDBBaFerdrWqMIU1e8qacm1+rt8fD/MIoWVZZwitalaO5U26vfFQW9NvLR4M83CWsvF47LLDWXqCUFtTYLpi0jIRT6LF8lEcbefQ0yj98DSUtp3ThIk12xJTGpP7X4vl+30xw9fFrBEwmqn+llHkCn1lxrYgvnfGhoYxNSZVk3bXmC1e75EE1cLp/MPnXIyC8RwlfKTIThLa2Y9iJY+ademBRHsSwuYfYgLcrLGT/SZK680RI5+Xf2dHenYeG/6wJsSTuvZAQWM2n5bfKwj3H5BcyjsbQIrS9+BmjzOZN2j1EUX77B+tZTi8ilBjquxgqK0ZDGf7Uilr32A5BhqP+hPLEWO2ne6PCn4t0+vIdPi1iAzlPMxPaExbnR2MxYXhm7/LnK5TTqgk3NR73bZn2Y5jVz2fGBVw5X0HN2BD+Ifxe0tOR851hAaqrXzPRgLSXMv+14JScKS9udiVcAHTsq0RNboYlX8k6Iupy1MjDhrKk15L6KTxQ4RJSv16D5b9rDzAkJOmpS4Kbk5yBgKTkV26OD7I0KqKqfue/NEn1Sa8glCsQAkXEOnSAhcqEw+u3mS8vJW44Lxt2+rqqTeXRd93YrEFCSaO1TNsCAvTtezchGLZWSLBYeom0gAcNhQmYt2/yIx3URbgYCeGZxsDUd6cw9Ikrdh5rgLi95o0bZEu4Q8m+pdOEaZfKuHGeiFQJh02LHcn+afwFbuy0tY1592DlaJrPUJb8WUXwpem83YdEBUpztrQVqmpKDS05dhwLKNR1TFvAein7y5O4PKFv7CzA5OclucS8r2Kmb79xlYDdoCXdhOoE4QSbqTLC0L9oYxGlmE5Q+C7S2rcQagYHZ9b4rJjytTumrgXg9ieq4gL12pOsSzhj5AO7nLcOw2nfmVESgoYMxJIl/9yeFGYY1ZP7JBmEg65Q8o2bSteRi8ZQhkL+rJpoxYdwHUB7qKv9YJyAsZ7AKHizHWt9hBGumvNX8NBpxOu1tuGSoCkK4QFZWRtevk2VXsRTMcU3BnLmVdqkuD98oCv1oLICu+0HKs7hODFIXsMAlV2+HVfz77AlUmQ5TJXwenySAVUgLPPffUPtSkpIWBAXnI5Vlv9XjLnIOUZTYySVkxDt7chm/gzpb7Cdqq5TGdcxmV+8QEDqoPuhYHYsVPs9XojNXRIzIUraXebdRUFRG6p8q9mV09dva6PLO+TKiNgiOogZ0JpO+K/qmEYW6470Qn2gdB3ZdmVRPEULfdMLSNgiFBx5VwymOVPqEOsHmW0J0qS336V+j4Hkv2iA8aMsMnlS1+SJW3o2dfMyCN6qU4KrzBCGSqu8XfHBBUHENKfqd8vBBXGrtiAoULFrYQQDYWnca8KDUflFB0wOgGpW45948BgWKI/wC7E1VyCgBEU2UrNESryEDYhh4P/SPPG7xLLuFvo0QBdVfxeyvgTWMx1Uoeca3JFZDihYgPGTaFCIdqyJqB9l9T7lIxuXogFVxgfuqq4Td6Q+TLzHt44I5QmBVYY4YWqIpdeINWiI0k4orRr3+q2ZIVRVEtqwWn7VkAZKqgHP+qWR69umh6R06e0oIABVUVd97d/OxpbDghmgiSEcJ12bn4NaFv1oiqMNWdxV0j288SMe0lGnpcRJhXMBEkoYa+8W5kmv+XJxgdjBQWMabzPNExrgusTy4nIZXSNDz/9vAHDvJIddzCHaquYF3XAejDdx3uFlG4ypY9dzUkrQgUkDdKGIj/NF350ii5vhRM3Psw9xWIAlcJXsWso90bijTXniiIIqoqh9aIJq1cFDNVK7cfnjBjbNWbz13I6+53/NQjzudFr93J2jxwRKuxqTOiIgJHr97TlXGE52RvwSeN/Je7t1xqkGbckpDXFZlCeToteeTGhXpWHMmZ8vPGk2x+iqyMaH83MVl4phLrzAvfVl/eV6IaSI/YST6lNVdIQE4qAca7CcDItLOLrjSe49F8Q6lttG2sD5uzZpqDIP9qOQei0g1MBw5Z7M0kbUnrwtJX6V4RqKIl/8/UuG1ddazvucCcW8QI9KWNCleEcWM7WG096padROAktf0n4oi+bxKjYA/kH/WsZKqomochSSc/4F/Gumr5X2nKGt74DYfbuZzZYhFswd488CA5WhlCEDx0wRKdRbDwlltsIy9npHcrE27sRak51Bk+PFQKLXkJpgE8JbZkCWOoIJkumJZhfdpJP6c6E2pqe9BQs3uhsjtykvkxnqdhBckWP2OjwTy5nEfcmTP4u4+3hR9yZSW1YtZuE/di+sJ3stzwgYQYWFlgcsYP2ISEEDIgFGi53+nd/woO/lac2+nEQNQihYuy2k/3QvMXK/QmPyTCQSZj9m6cmNAeYJfzFFyAhEiIhEiIhEiIhEiIhEiIhEiIhEiJhoYS/5LyB0P5DwhuseKMNbfsPCMfWuZZ0yYSOVT4hY3Jb4ZoWZyGE8QGMDSuXUL9uLt0a+htCx06fPOH86/Iwb1BHHcvgYk89fhDYudyLv5bwJTkanj55wuQj+h/76R88oa+OZfB0oy/dLbqEmYdQw2WfGeIlHsA4LvlA/pCnj3WrYxmFEDryyd/M4/jzv3wc31AnfF20/J1amn788PMthPErFfQBDL4bthav935BRud9ufiKj0wlG2Un5usZwuR9Eb62XOP+r8UwNHhfLyJfO9pks/MIYf04YbytqiwnXm2yDh/qDS5Kg9V6G8XH/DLHMs4ROo6XPvkrXza0ftSXDSkB5qcbKMzDYxmZZ0jlAQzzFUPu54PDpeok1qTGsQwntaETn1FIXxO1frrXY9cG07dtlMQThSltaNuT5JiReDnU9u3x32h2UoC5n0WBsqY/bHY3ZANRnMVwsyd4XVsOydclNtTaVOcvwLKNJ3yB4nl1wum/mR8E9Olem3iVhDX/Y5ZDoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCof5c/wdoKAEXEmi+vgAAAABJRU5ErkJggg==" alt="loading..." width="10%" class="image img-fluid">
+        <h2 class="empty">You have nothing selected in the cart list</h2>
+        <% } %>
+      
+</body>
+</html>

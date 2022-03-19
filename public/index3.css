@@ -1,0 +1,163 @@
+
+
+/* ----------TYPES OF CASHEW SECTION -------------*/
+.navbar-brand{
+ margin-left: 130px; 
+ font-weight: 400;
+ font-size: 50 px;
+ font-family: 'Kaushan Script', cursive;
+ }
+.nav-item{
+   
+    margin-right: 70px;
+     padding-top: 5px;
+     /* padding-bottom:5px;  */
+     color: rgb(243, 239, 239);
+ }
+ .nav-item a:hover{
+     color: black;
+     border-bottom: 2px solid red;
+ }
+ .nh li a{
+     color: black;
+    
+ }
+ .active1
+ {
+     border-bottom: 2px solid red;
+ }
+.type{
+    text-align: center;
+    background-image: linear-gradient(to bottom, #9f98e8, #00b5ff, #00ceff, #00dec8, #3ee577);
+}
+.cards1{
+    text-align: center;
+}
+.wraperWhole{
+    margin: 3% 3%;
+    padding: 2% 2%;
+}
+
+strong{
+    text-align: left;
+    margin-bottom: 50px;
+    margin-top:50px;
+}
+#head1{
+    background-color: #1f9616;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+}
+/* .mynav{
+    margin-left: 370%;
+} */
+/* @media(max-width:900px){
+.mynav{
+    margin-left: 150%;
+}
+} */
+/* .navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+   
+} */
+.back{
+    text-align: center;
+    margin-top: 2%;
+}
+.buttontc{
+    text-align: center;
+    border-radius: 12px;
+    background-color: #3fa13f;  
+    border: none;
+    color: rgb(2, 1, 1);
+    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+ }
+ .buttontc:hover{
+    
+    color: white;
+ }
+
+ /* --------------------------------------------ABOUTUS----------------------------------------------- */
+ #head3{
+    position: sticky;
+z-index: 100;
+padding: .5rem 5rem;
+box-shadow: 5px 5px 20px rgba(17, 12, 12, 0.712);
+}
+ .type3{
+    text-align: center;
+    background-image: linear-gradient(to bottom, #9f98e8, #00b5ff, #00ceff, #00dec8, #3ee577);
+}
+ .container{
+    padding-top: 15px;
+  /* padding-left: 10px;
+   padding-right: 10px;  */
+   background-color: rgba(128, 128, 128, 0.603);
+   margin-top: 50px;
+   border: black 2px solid ;
+    /* border-left: 30%;
+    border-right: 30%; */
+  text-align: justify;
+    color: black;
+}
+#content{
+    padding: 5px;
+    line-height: 2.5;
+    font-family:  'Cambria';
+    /* font-family: 'Kaushan Script', cursive; */
+    font-size: 18px;
+}
+.img1
+{
+    margin-right:500px;
+    margin-top: 50px;
+    position: sticky;
+    z-index: 100;
+    padding: .5rem 5rem;
+    box-shadow: 5px 5px 20px rgba(17, 12, 12, 0.712);  
+}
+.img2
+{
+    margin-left:550px;
+    margin-top: 50px;
+    position: sticky;
+    z-index: 100;
+    padding: .5rem 5rem;
+    box-shadow: 5px 5px 20px rgba(17, 12, 12, 0.712);  
+}
+.c2
+{  
+    margin-bottom: 50px;
+    
+}
+#footer{
+    padding: 2% 5%;
+    text-align: center;
+    color: rgb(241, 237, 237);
+}
+.foot{
+    background-color: rgb(9, 15, 105);
+   
+    background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");
+}
+.social-icon{
+    margin: 20px 10px;
+
+}
+#ct
+{
+    margin-right: 80%;
+}
+#em{
+    margin-right: 76%;
+}
+
+
+
